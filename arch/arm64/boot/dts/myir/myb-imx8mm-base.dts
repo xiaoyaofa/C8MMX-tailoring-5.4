@@ -166,7 +166,8 @@
 
 &csi1_bridge {
 	fsl,mipi-mode;
-	status = "okay";
+	// status = "okay";
+	status = "disabled";
 	port {
 		csi1_ep: endpoint {
 			remote-endpoint = <&csi1_mipi_ep>;
@@ -198,7 +199,8 @@
 	phy-mode = "rgmii-id";
 	phy-handle = <&ethphy0>;
 	fsl,magic-packet;
-	status = "okay";
+	// status = "okay";
+	status = "disabled";
 	
 	mdio {
 		#address-cells = <1>;
@@ -309,7 +311,8 @@
 	assigned-clock-parents = <&clk IMX8MM_SYS_PLL1_80M>;
 	fsl,uart-has-rtscts;
 	resets = <&modem_reset>;
-	status = "okay";
+	// status = "okay";
+	status = "disabled";
 };
 
 /* console */
@@ -365,7 +368,8 @@
     keep-power-in-suspend;
     // enable-sdio-wakeup;
 	non-removable;
-	status = "okay";
+	// status = "okay";
+	status = "disabled";
 };
 
 &usdhc2 {
@@ -548,7 +552,8 @@
 	ov5640_mipi: ov5640_mipi@3c {
 		compatible = "ovti,ov5640_mipi";
 		reg = <0x3c>;
-		status = "okay";
+		// status = "okay";
+		status = "disabled";
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_csi_pwn>, <&pinctrl_csi_rst>;
 		clocks = <&clk IMX8MM_CLK_CLKO1>;
@@ -952,7 +957,8 @@
 &mipi_csi_1 {
 	#address-cells = <1>;
 	#size-cells = <0>;
-	status = "okay";
+	// status = "okay";
+	status = "disabled";
 	
 	port {
 		mipi1_sensor_ep: endpoint@1 {
